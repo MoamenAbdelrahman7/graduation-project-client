@@ -28,10 +28,19 @@ import Link from "next/link";
 
 export default function Home() {
   const API_URL = "https://mygraduationproject-production.up.railway.app/"
-
-  const user = {
-    name: "Moamen abdelrahman abdallah"
-  }
+  const [user, setUser] = useState(null)
+  useEffect(() => {
+    const getUser = async () => {
+      const response = await fetch(`${API_URL}users/68162c5d6e960a01da25c173`)
+      const data = await response.json()
+      console.log(data)
+      return data.data
+    }
+    getUser().then(data => setUser(data))
+  }, [])
+  // const user = {
+  //   name: "Moamen abdelrahman abdallah"
+  // }
   const [isLiked, setIsLiked] = useState(false);
   const [showComments, setShowComments] = useState(false);
   const [posts, setPosts] = useState([]);
@@ -162,6 +171,15 @@ export default function Home() {
     const content = postInputRef.current.value
     if (content.length === 0) { return }
 
+    // const newPost = {
+    //   user: {
+    //     name: "Moamen abdelrahman abdallah",
+    //     photo: photo
+    //   },
+    //   createdAt: formattedDate,
+    //   content: content,
+    //   likedUsers: []
+    // }
     const newPost = {
       user: {
         name: "Moamen abdelrahman abdallah",

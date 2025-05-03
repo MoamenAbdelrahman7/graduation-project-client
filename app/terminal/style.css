@@ -1,0 +1,151 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+.container{
+    background-color: #0e0e0e;
+    height: calc(100vh - 62px);
+    display: grid;
+    place-items: center;
+}
+.container .terminal{
+    height: 80%;
+    width: 70%;
+    background-color: red;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    position: relative;
+}
+.container .terminal::-webkit-scrollbar{
+    display: none;
+}
+.container .terminal .head{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 14px;
+    background-color: #222222;
+    border-radius: 8px 8px 0 0;
+    position: sticky;
+    top: 0;
+}
+.container .terminal .head .icons{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 60px;
+}
+.container .terminal .head .icons span:nth-child(1){
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #ff5f56;
+}
+.container .terminal .head .icons span:nth-child(2){
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #ffbd2e;
+}
+.container .terminal .head .icons span:nth-child(3){
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #27c93f;
+}
+.container .terminal .head .title{
+    color: #bdbdbd;
+}
+
+.container .terminal .body{
+    flex: 1;
+    background-color: #1e1e1e;
+    color: #fafafa;
+    font-size: 15px;
+    padding: 16px;
+    /* padding-bottom: 30px; */
+    letter-spacing: 1px;
+}
+.container .terminal .body .commands{
+
+}
+.container .terminal .body .commands .command{
+    display: flex;
+    gap: 7px;
+    margin-bottom: 6px;
+}
+.container .terminal .body .commands .command small{
+    color: #01fa85;
+    font-size: 15px;
+}
+.container .terminal .body .commands .command p{
+    
+}
+
+.container .terminal .footer{
+    background-color: #27c93f;
+    height: 40px;
+    position: relative;
+    border-radius: 0  0 8px 8px;
+    position: sticky;
+    bottom: 0;
+    flex-shrink: 0;
+}
+.container .terminal .footer small{
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 18px;
+    color: #01fa85;
+}
+.container .terminal .footer input{
+    width: 100%;
+    padding: 5px 18px 5px 28px;
+    height: 100%;
+    outline: none;
+    border-radius: 0  0 8px 8px;
+    border: none;
+    color: #818181;
+    background-color: #2b2b2b;
+    letter-spacing: 1px;
+    caret-color: #01fa85;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

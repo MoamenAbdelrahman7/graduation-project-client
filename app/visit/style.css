@@ -1,0 +1,480 @@
+
+
+
+
+
+
+
+
+
+
+
+
+/* General */
+@import url('https://fonts.googleapis.com/css2?family=National+Park:wght@200..800&display=swap');
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: 'National Park', sans-serif;
+  outline: none;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+a{
+    text-decoration: none;
+}
+.container{
+    background-color: #f5f7fb;
+    /* height: 100vh; */
+    /* display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(6, 1fr); */
+}
+
+.container .profileCover{
+    height: 200px;
+    border-radius: 0 0 20px 20px;
+    position: relative;
+    background-image: url("./../../public/images/cover.jpg");
+    background-size: contain;
+    /* grid-area: 1 / 1 / 2 / 13; */
+}
+
+.container .profileCover img{
+    width: 120px;
+    height: 120px;
+    border: 4px solid white;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -60px;
+    left: 50px;
+    background-size: cover;
+}
+
+img{
+    width: 40px;
+    height: 40px;
+}
+
+.container .subContainer{
+    display: flex;
+    gap: 30px;
+    padding: 20px 40px;
+
+    
+}
+.container .subContainer .left{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.container .subContainer .right{
+    width: 80%;
+}
+
+.container .infoCard{
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    /* justify-content: center; */
+    width: 320px;
+    /* height: 350px; */
+    margin-top: 60px;
+    padding: 20px 14px;
+    background-color: white;
+    border-radius: 8px;
+    /* grid-area: 2 / 1 / 3 / 4; */
+
+}
+
+.container .infoCard .name{
+    font-size: 22px;
+    letter-spacing: 0.8px;
+}
+.container .infoCard .jobTitle{
+    font-size: 16px;
+    color: blueviolet;
+    text-transform: capitalize;
+    letter-spacing: 0.8px;
+
+    
+}
+.container .infoCard .follow-row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 0;
+    
+}
+.container .infoCard .follow-row > span{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+.container .infoCard .follow-row > span h3{
+    font-size: 28px;
+    letter-spacing: 1px;
+    color: blueviolet;
+}
+.container .infoCard .follow-row > span small{
+    letter-spacing: 1px;
+    font-size: 10x;
+    color: grey;
+    font-weight: 400;
+}
+
+.container .infoCard #editProfileBt{
+    width: 42%;
+    padding: 8px ;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-weight: bold;
+    letter-spacing: 0.6px;
+    color: blueviolet;
+    /* background: none; */
+    background-color: white;
+    border: 1px solid blueviolet;
+    border-radius: 4px;
+    font-size: 15px;
+    /* justify-content: center; */
+    transition: background-color 0.2s;
+}
+.container .infoCard #editProfileBt:hover{
+    background-color: rgba(199, 155, 240, 0.404);
+}
+.container .infoCard #editProfileBt i{
+    width: 20px;
+    height: 20px;
+    
+}
+.container .infoCard #editProfileBt i img{
+    width: 100%;
+    height: 100%;
+}
+
+.container .skillsCard {
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    gap: 6px;
+    width: 320px;
+    padding: 16px 14px;
+    background-color: white;
+    border-radius: 8px;
+    /* grid-area: 3 / 1 / 4 / 4; */
+
+
+}
+.container .skillsCard .head{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.container .skillsCard .head h1{
+    font-size: 18px;
+}
+
+.container .skillsCard .head button{
+    width: 90px;
+    padding: 6px 8px 6px 4px ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    font-weight: bold;
+    letter-spacing: 0.6px;
+    color: blueviolet;
+    /* background: none; */
+    background-color: white;
+    border: 1px solid blueviolet;
+    border-radius: 4px;
+    font-size: 17px;
+    /* justify-content: center; */
+    transition: background-color 0.2s;
+}
+.container .skillsCard .head button:hover{
+    background-color: rgba(199, 155, 240, 0.404);
+}
+
+.container .skillsCard .head button i{
+    width: 15px;
+    height: 15px;
+}
+.container .skillsCard .head button img{
+    width: 100%;
+    height: 100%;
+}
+.container .skillsCard .items{
+    display: flex;
+    gap: 8px;
+    flex-direction: column;
+    /* flex-wrap: wrap; */
+    padding: 12px 6px;
+}
+
+.container .skillsCard .items .item{
+    background-color: rgba(203, 162, 241, 0.173);
+    border: 1px solid blueviolet;
+    color: rgb(112, 18, 199);
+    padding: 8px 12px;
+    letter-spacing: 1.2px;
+    width: fit-content;
+    font-size: 14px;
+    border-radius: 14px;
+
+}
+
+
+/* Contact info */
+.container .contactInfoCard {
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    width: 320px;
+    padding: 16px 14px;
+    background-color: white;
+    border-radius: 8px;
+    /* grid-area: 4 / 1 / 5 / 4; */
+}
+.container .contactInfoCard h1{
+    font-size: 20px;
+}
+
+.container .contactInfoCard .items{
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    padding: 12px 0;
+}
+
+.container .contactInfoCard .items .item{
+    
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.container .contactInfoCard .items .item img{
+    width: 30px;
+    height: 30px;
+}
+
+.container .contactInfoCard .items .item span{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 4px;
+}
+.container .contactInfoCard .items .item span small{
+    font-size: 14px;
+    color: grey;
+    letter-spacing: 0.5px;
+    /* text-transform: uppercase; */
+}
+.container .contactInfoCard .items .item span p{
+    font-size: 18px;
+    color: rgb(41, 0, 80);
+    letter-spacing: 0.3px;
+}
+.container .contactInfoCard .items .item span p a{
+    color: rgb(99, 4, 187);
+}
+
+/* About */
+.container .aboutCard{
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    width: 100%;
+    margin-top: 60px;
+    padding: 16px 14px;
+    background-color: white;
+    border-radius: 8px;
+    padding: 32px 30px;
+    /* grid-area: 2 / 4 / 4 / 13; */
+}
+
+.container .aboutCard .head{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container .aboutCard .head h1{
+    font-size: 32px;
+    letter-spacing: 1px;
+}
+
+.container .aboutCard .head button{
+    width: 90px;
+    padding: 6px 8px 6px ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    font-weight: bold;
+    letter-spacing: 0.6px;
+    color: blueviolet;
+    /* background: none; */
+    background-color: white;
+    border: 1px solid blueviolet;
+    border-radius: 4px;
+    font-size: 20px;
+    /* justify-content: center; */
+    transition: background-color 0.2s;
+}
+.container .aboutCard .head button:hover{
+    background-color: rgba(199, 155, 240, 0.404);
+}
+.container .aboutCard .head button i{
+    width: 20px;
+    height: 20px;
+}
+
+.container .aboutCard .head button img{
+    width: 100%;
+    height: 100%;
+}
+
+.container .aboutCard .about{
+    font-size: 20ox;
+    padding: 16px 12px;
+    letter-spacing: 0.5px;
+    /* width: 90%; */
+    text-wrap: balance;
+    line-height: 24px;
+}
+
+/* Update Form */
+.container #updateForm{
+    /* width: 400px; */
+    padding: 24px;
+    border: 1px solid blueviolet;
+    border-radius: 8px;
+    background-color: white;
+    /* grid-area: 9 / 4 / 13 / 13; */
+    /* width: auto; */
+}
+
+.container #updateForm h1{
+    
+}
+
+.container #updateForm form{
+    padding: 10px;
+}
+.container #updateForm form fieldset{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    border: none;
+    margin: 8px 0;
+}
+.container #updateForm form fieldset label{
+    font-size: 16px;
+    color: grey;
+    letter-spacing: 1px;
+}
+.container #updateForm form fieldset input{
+    width: 80%;
+    height: 40px;
+    font-size: 16px;
+    color: blueviolet;
+    letter-spacing: 1.2px;
+    padding: 8px 16px;
+    border: 1px solid blueviolet;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+}
+.container #updateForm form fieldset input:hover,
+.container #updateForm form fieldset textarea:hover{
+    background-color: rgba(207, 156, 255, 0.16);
+}
+
+.container #updateForm form fieldset textarea{
+    font-size: 16px;
+    color: blueviolet;
+    letter-spacing: 1.2px;
+    padding: 8px 16px;
+    border: 1px solid blueviolet;
+    resize: none;
+    width: 80%;
+
+}
+
+.container #updateForm form .formButtons{
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.container #updateForm form .formButtons button[type="submit"]{
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    width: 140px;
+    padding: 4px 8px;
+    border-radius: 4px;
+    background-color: cadetblue;
+    color: white;
+    border: 1px solid rgb(1, 71, 1);
+    letter-spacing: 0.5px;
+    transition: background-color 0.2s;
+}
+.container #updateForm form .formButtons button[type="submit"]:hover{
+    background-color: rgb(9, 99, 102);
+
+}
+.container #updateForm form .formButtons button[type="submit"] img{
+    width: 22px;
+    height: 22px;
+}
+
+.container #updateForm form .formButtons button[type="button"]{
+    padding: 4px 8px;
+    color: red;
+    letter-spacing: 0.5px;
+    border: 1px solid red;
+    background-color: rgba(244, 197, 197, 0.349);
+    border-radius: 4px;
+    transition: background-color 0.2s;
+}
+
+.container #updateForm form .formButtons button[type="button"]:hover{
+    background-color: rgba(244, 197, 197, 0.743);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

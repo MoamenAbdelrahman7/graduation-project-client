@@ -1,0 +1,427 @@
+
+.container{
+    height: calc(100vh - 62px);
+    background-color: #fafafa;
+    display: flex;
+    
+}
+.container .recommended{
+    display: flex;
+    flex: 1;
+    height: calc(100vh - 62px);
+    padding: 40px 20px;
+    padding-right: 0;
+    overflow-y: auto;
+}
+.container .recommended::-webkit-scrollbar{
+    display: none;
+}
+.container .recommended .items{
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+.container .recommended .items .item{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #fff;
+    border: 1px solid black;
+    padding: 10px 16px 18px;
+    border-radius: 8px;
+    height: 150px;
+    width: 290px;
+    box-shadow: 4px 4px 8px rgb(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s;
+}
+.container .recommended .items .item:hover{
+    box-shadow: 8px 8px 12px rgb(0, 0, 0, 0.2);
+}
+
+.container .recommended .items .item .head{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.container .recommended .items .item .head .title{
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.container .recommended .items .item .head .title img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1.5px solid blueviolet;
+}
+
+.container .recommended .items .item .head .title h1{
+    font-size: 18px;
+    font-weight: 650;
+    letter-spacing: 0.4px;
+}
+
+.container .recommended .items .item .head .membersCount{
+    font-size: 17px;
+    font-weight: 600;
+    display: flex;
+    gap: 5px;
+    color: grey;
+}
+.container .recommended .items .item .head .membersCount img{
+    width: 17px;
+    height: 17px;
+}
+.container .recommended .items .item .description{
+    font-size: 12px;
+    text-transform: capitalize;
+    color: grey;
+    margin-left: 8px;
+
+}
+.container .recommended .items .item .footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.container .recommended .items .item .footer .tags{
+    
+}
+.container .recommended .items .item .footer .tags small{
+    background-color: whitesmoke;
+    color: blueviolet;
+    border: 0.1px solid blueviolet;
+    padding: 3px 5px;
+    font-size: 12px;
+    margin-inline: 4px;
+    border-radius: 8px;
+    text-transform: capitalize;
+}
+.container .recommended .items .item .footer #joinRoomBt{
+    padding: 6px 8px;
+    border-radius: 4px;
+    background-color: rgb(9, 155, 160);
+    border: 0.4px solid cadetblue;
+    color: white;
+    transition: background-color 0.2s;
+    letter-spacing: 0.5px;
+}
+.container .recommended .items .item .footer #joinRoomBt:hover{
+    background-color: rgb(2, 114, 118);
+}
+
+.container .joinedRooms{
+    background-color: #fafafa;
+    height: calc(100vh - 62px);
+    width: 310px;
+    padding-bottom: 14px;
+    border-left: 0.4px solid black;
+    overflow-y: auto;
+}
+.container .joinedRooms h1{
+    /* font-size: 26px;
+    padding: 0 14px 14px; */
+    font-size: 20px;
+    top: 0;
+    position: sticky;
+    background-color: rgb(238, 237, 237);
+    padding: 14px;
+    margin-bottom: 14px;
+    z-index: 999;
+    letter-spacing: 0.8px;
+    border-bottom: 0.1px solid black;
+}
+
+.container .joinedRooms .items button.item{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 14px;
+    position: relative;
+    width: 90%;
+    margin-inline: auto;
+    border-radius: 14px;
+    border: none;
+    background-color: white;
+    transition: transform 0.2s;
+}
+.container .joinedRooms .items button.item:hover{
+    transform: translateX(-6px);
+}
+.container .joinedRooms .items hr{
+    width: 90%;
+    margin: 6px;
+    margin-inline: auto;
+}
+.container .joinedRooms .items::-webkit-scrollbar{
+    display: none;
+  }
+
+.container .joinedRooms .items button.item > img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1.5px solid blueviolet;
+}
+.container .joinedRooms .items button.item span {
+    display: flex;
+    gap: 3px
+}
+.container .joinedRooms .items button.item span p{
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.4px;
+}
+
+.container .joinedRooms .items button.item .membersCount{
+    font-size: 16px;
+    font-weight: 600;
+    display: flex;
+    gap: 3px;
+    align-items: center;
+    position: absolute;
+    right: 10px;
+    opacity: 0.5;
+}
+.container .joinedRooms .items button.item .membersCount img{
+    width: 14px;
+    height: 14px;
+}
+
+/* room */
+
+.container .room img{
+    width: 20px;
+    height: 20px;
+}
+
+
+
+.container .room{
+    flex: 1;
+    height: calc(100vh - 62px);
+    padding: 40px 20px;
+    /* padding-right: 0; */
+    /* overflow-y: auto; */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+    background-color: #c2c2c2;
+}
+
+.container .room .membersList{
+    grid-area: 1 / 1 / 2 / 2;
+    background-color: white;
+    padding: 14px;
+    overflow-y: auto;
+    border-radius: 12px 0 0 12px;
+}
+.container .room .membersList::-webkit-scrollbar{
+    display: none;
+}
+.container .room .membersList >h1{
+    font-size: 24px;
+    border-bottom: 0.2px solid black;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    letter-spacing: 0.4px;
+
+}
+.container .room .membersList .members{
+    padding-inline: 10px;
+}
+.container .room .membersList .members .member{
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    border: 1px solid cadetblue;
+    position: relative;
+    padding: 8px 4px;
+    padding-left: 29px;
+    border-radius: 16px;
+    background-color: rgba(65, 142, 145, 0.799);
+    color: white;
+    box-shadow: 4px 4px 8px rgb(0, 0, 0, 0.3);
+    transition: background-color 0.2s;
+    margin: 12px 0;
+}
+.container .room .membersList .members .member:hover{
+    background-color: rgba(76, 185, 189, 0.799);
+}
+.container .room .membersList .members .member img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    position: absolute;
+    left: -14px;
+    border: 1.5px solid cadetblue;
+}
+.container .room .membersList .members .member h3{
+    font-size: 12px;
+    font-weight: 650;
+    letter-spacing: 0.5px;
+}
+
+.container .room .chat{
+    grid-area: 1 / 2 / 2 / 5;
+    background-color: #fafafa;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    position: relative;
+    border-radius: 0 12px 12px 0;
+}
+.container .room .chat #closeRoomBt{
+    position: sticky;
+    top: 10px;
+    margin-left: auto;
+    margin-right: 10px;
+    width: 24px;
+    height: 24px;
+    z-index: 1000;
+    background: none;
+    border: none;
+}
+.container .room .chat::-webkit-scrollbar{
+    display: none;
+}
+.container .room .chat .head{
+    background-color: rgb(245, 245, 245);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 70px;
+    /* border-radius: 30px 0 0 30px; */
+}
+.container .room .chat .head img{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 2px solid cadetblue;
+}
+.container .room .chat .head > span{
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+.container .room .chat .head > span h2{
+    font-size: 20px;
+    letter-spacing: 1px;
+    font-weight: 500;
+}
+.container .room .chat .head > span .membersOverview{
+    font-size: 12px;
+    color: rgb(143, 142, 142);
+    margin-left: 10px;
+}
+
+.container .room .chat .messages{
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    padding: 20px 15px;
+    flex: 1;
+    margin-bottom: 20px;
+}
+/* @keyframes animateMessage {
+    from{
+        transform: translateY(10px);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+} */
+.container .room .chat .messages .messageItem{
+    display: flex;
+    gap: 6px;
+    max-width: 50%;
+    /* animation: animateMessage 0.2; */
+}
+.container .room .chat .messages .messageItem img{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    border: 1.5px solid cornflowerblue;
+}
+.container .room .chat .messages .messageItem .memberName{
+    font-size: 13px;
+    letter-spacing: 0.7px;
+    margin-bottom: 6px;
+}
+.container .room .chat .messages .messageItem .messageContent{
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.3px;
+    border: 1px solid cadetblue;
+    background-color: rgb(102, 198, 202);
+    color: white;
+    padding: 6px 12px;
+    border-radius: 8px;
+}
+/* my message */
+.container .room .chat .messages .messageItem.myMsg{
+    align-self: flex-end;
+
+}
+.container .room .chat .messages .messageItem.myMsg img{
+    display: none;
+}
+.container .room .chat .messages .messageItem.myMsg .memberName{
+    display: none;
+}
+ .container .room .chat .messages .messageItem.myMsg .messageContent{
+     background-color: rgb(27, 99, 101);
+} 
+    
+.container .room .chat .footer{
+    padding-inline: 14px;
+    margin-bottom: 12px;
+    position: sticky;
+    bottom: 0;
+    background-color: white;
+}
+.container .room .chat .footer input#messageInput{
+    height: 30px;
+    width: 85%;
+    height: 35px;
+    padding: 4px 14px;
+    /* font-size: ; */
+    letter-spacing: 0.9px;
+    outline: none;
+    border-radius: 20px;
+    border: 0.1px solid black;
+    transition: background-color 0.2s;
+
+}
+
+.container .room .chat .footer button#sendMessageBt{
+    padding: 8px 16px;
+    margin-left: 10px;
+    background-color: cornflowerblue;
+    border: 1px solid rgb(50, 96, 183);
+    border-radius: 3px;
+    color: white;
+    letter-spacing: 0.7px;
+    transition: background-color 0.2s;
+}
+.container .room .chat .footer button#sendMessageBt:hover{
+    background-color: rgb(53, 119, 241);
+}
+
+
+
+
+
+
+
+
+
+
+

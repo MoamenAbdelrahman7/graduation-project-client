@@ -1,0 +1,213 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+}
+
+.container{
+    height: calc(100vh - 62px);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+}
+
+.container .notesList{
+    grid-area: 1 / 3 / 2 / 4;
+    height: 100%;
+    padding: 20px 30px 0;
+    display: flex;
+    flex-direction: column;
+    border-left: 0.1px solid black;
+    overflow-y: auto;
+}
+.container .notesList h1{
+    font-size: 32px;
+    letter-spacing: 1px;
+    margin-bottom: 14px;
+}
+.container .notesList .notes{
+    flex: 1;
+}
+.container .notesList .notes .note{
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    justify-content: space-between;
+    border: 0.1px solid black;
+    padding: 6px 20px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    background-color: rgba(172, 148, 52, 0.247);
+    /* background: none;
+    width: 100%; */
+    box-shadow: 5px 5px 8px rgb(0, 0, 0, 0.15);
+    transition: box-shadow 0.2s;
+
+}
+.container .notesList .notes .note:hover{
+    box-shadow: 7px 7px 13px rgb(0, 0, 0, 0.3);
+}
+.container .notesList .notes .note button:nth-child(1){
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex: 1;
+    background: none;
+    border: none;
+}
+.container .notesList .notes .note img{
+    width: 26px;
+    height: 26px;
+}
+.container .notesList .notes .note h2.title{
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+.container .notesList .notes .note button#deleteNoteBt{
+    font-size: 16px;
+    background: none;
+    border: none;
+}
+
+.container .notesList .createNote{
+    /* background-color: ; */
+    height: 40px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 4px;
+    margin-bottom: 8px;
+}
+.container .notesList .createNote #noteTileInput{
+    flex: 1;
+    height: 100%;
+    padding: 3px 8px;
+    outline: none;
+    letter-spacing: 0.8px;
+}
+.container .notesList .createNote #addNoteBt{
+    padding: 3px 10px;
+    letter-spacing: 0.3px;
+    background-color: #049e56;
+    border: 1px solid #01fa85;
+    color: white;
+    border-radius: 3px;
+    transition: background-color 0.2s;
+}
+.container .notesList .createNote #addNoteBt:hover{
+    background-color: #06cd70;
+}
+.container .noteContent{
+    grid-area: 1 / 1 / 2 / 3;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    position: relative;
+}
+
+
+.container .noteContent .items{
+    background-color: whitesmoke;
+    margin-bottom: 8px;
+    flex: 1;
+    padding: 18px;
+    overflow-y: auto;
+
+}
+.container .noteContent .items::-webkit-scrollbar{
+    display: none;
+}
+
+@keyframes animateNoteItem {
+    from{
+        transform: translateY(10px);
+        opacity: 0;
+    }    
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+.container .noteContent .items .item{
+    background-color: rgb(170, 82, 232);
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    width: fit-content;
+    min-width: 80px;
+    padding: 3px 12px;
+    border-radius: 20px;
+    margin-bottom: 8px;
+    animation: animateNoteItem 0.4s ease-in-out ;
+}
+.container .noteContent .items .item img{
+    width: 30px;
+    height: 30px;
+}
+.container .noteContent .items .item a{
+    font-size: 16px;
+    color: white;
+    letter-spacing: 1.3px;
+    transition: text-decoration 0.2s, color 0.2s;
+}
+.container .noteContent .items .item a:hover{
+    text-decoration: underline;
+    color: darkblue;
+}
+
+.container .noteContent .addNoteItem{
+    background-color: whitesmoke;
+    height:40px;
+    padding: 6px 14px;
+    display: flex;
+    align-items: center;
+    gap: 16px;    
+    position: sticky;
+    bottom: 0;
+}
+
+.container .noteContent .addNoteItem  input{
+    height: 100%;
+    padding: 3px 8px;
+    outline: none;
+    letter-spacing: 0.8px;
+}
+.container .noteContent .addNoteItem  #titleInput{
+    width: 25%;
+}
+.container .noteContent .addNoteItem  #urlInput{
+    width: 65%;
+    
+}
+.container .noteContent .addNoteItem #addItemBt{
+    padding: 4px 12px;
+    background-color: rgb(19, 74, 174);
+    border: 1px solid cornflowerblue;
+    color: white;
+    letter-spacing: 0.7px;
+    transition: background-color 0.2s;
+    width: 60px;
+    border-radius: 3px;
+}
+.container .noteContent .addNoteItem #addItemBt:hover{
+    background-color: rgb(22, 89, 212);
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

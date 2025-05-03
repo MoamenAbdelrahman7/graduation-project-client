@@ -1,0 +1,130 @@
+/* General */
+@import url('https://fonts.googleapis.com/css2?family=National+Park:wght@200..800&display=swap');
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: 'National Park', sans-serif;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+
+img{
+    width: 25px;
+    height: 25px;
+}
+
+.container{
+    min-height: calc(100vh - 62px);
+}
+
+.container .items{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 40px;
+    padding-inline: auto;
+    gap: 40px;
+}
+
+.container .items .item{
+    border: 1.5px solid rgb(87, 87, 237);
+    width: 230px;
+    /* height: 250px; */
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 15px;
+    box-shadow: 5px 5px 14px rgb(206, 199, 199);
+}
+
+.container .items .item .head{
+    position: relative;
+    width: 100%;
+}
+.container .items .item .head .cover{
+    width: 100%;
+    height: 120px;
+    border-radius: 15px 15px 10px 10px;
+}
+.container .items .item .head .photo{
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    left: 50%;
+    bottom: -30px;
+    translate: -50%;
+    border: 3px solid white;
+    border-radius: 50%;
+}
+
+.container .items .item .info{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    padding: 35px 0 20px;
+}
+.container .items .item .name{
+    font-size: 19px;
+}
+.container .items .item .jobTitle{
+    text-transform: capitalize;
+    letter-spacing: 0.5px;
+    color: blueviolet;
+}
+
+.container .items .item .skills-tags{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.container .items .item .skills-tags small{
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    border: 0.2px solid blueviolet;
+    color: rgb(50, 1, 96);
+    padding: 2px 6px;
+    border-radius: 15px;
+    background-color: rgba(186, 137, 232, 0.159);
+    opacity: 0.8;
+    font-weight: 500;
+}
+
+.container .items .item #followBt{
+    width: 40%;
+    padding: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 4px;
+    background-color: rgb(87, 87, 237);
+    color: rgb(255, 255, 255);
+    border: 1px solid  rgb(2, 2, 121);
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    transition: background-color 0.2s;
+}
+
+.container .items .item #followBt:hover{
+    background-color: rgb(33, 33, 159);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

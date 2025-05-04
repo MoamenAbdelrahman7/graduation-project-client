@@ -189,6 +189,32 @@ export default function Home() {
       content: content,
       likedUsers: []
     }
+
+    const createPost = async () => {
+      try {
+
+        const response = await fetch(`${API_URL}posts/`, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify({ ...newPost, _id: user._id })
+        });
+        const data = await response.json();
+
+        if (!response.ok) {
+          console.error(`Failed to fetch posts: ${data.message || response.statusText}`);
+          return null;
+        }
+
+        return data.data;
+      } catch (error) {
+        console.error('Error fetching posts:', error);
+        return null;
+      }
+    }
+    createPost().then(data => setPosts(data))
+
     setPosts([newPost, ...posts])
     postInputRef.current.value = ""
   }
@@ -269,7 +295,7 @@ export default function Home() {
               {posts.map((post, index) => <div className="item" key={index}>
                 <span className="head">
                   <span className="userAvatar">
-                    <Image src={post.user.photo || photo} alt="" />
+                    <Image src={photo} alt="" />
                     <p>{post.user.name}</p>
                   </span>
                   <span className="date">{post.createdAt}</span>
